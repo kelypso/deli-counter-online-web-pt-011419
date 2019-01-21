@@ -4,7 +4,12 @@ def line(katz_deli)
   if katz_deli.length == 0 
     "The line is currently empty."
   else
-    message = ""
+    message = "The line is currently: "
+    katz_deli.each_with_index do |name, number|
+      message += "#{number.to_i + 1}. #{name}"
+    end
+    message
+  end
 end
 
 def take_a_number(katz_deli, name)
@@ -20,3 +25,4 @@ def now_serving(line)
   end
   line = line.shift
 end
+
