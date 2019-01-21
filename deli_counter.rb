@@ -8,7 +8,7 @@ def line(katz_deli)
     katz_deli.each_with_index do |name, number|
       message += "#{number.to_i + 1}. #{name}"
     end
-    puts message
+    puts "#{message}""
   end
 end
 
